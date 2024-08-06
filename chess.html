@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>chess</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+	<style type="text/css">
+		.chessboard{
+			width:680px;
+			height: 680px;
+			margin: auto;
+			border: 14px solid sandybrown;
+			border-radius:4%;
+			position: relative;
+		}
+		.piece{
+			 position: absolute;
+            top: 0;
+            left: 15px;
+            text-align: center;
+            transition: all 1s linear;
+            z-index:7777;
+		}
+	.black{
+		    width: 85px;
+            height: 85px;
+            background-color :cadetblue;
+            font-size:50px;
+            top: 0;
+            float: left;
+            text-align:center;
+            position: relative;
+            border-radius:5%;
+
+		}
+		.white{
+			float: left;
+            width: 85px;
+            height: 85px;
+            background-color: whitesmoke;
+            font-size:50px;
+            top: 0;
+            text-align:center;
+            position: relative;
+            border-radius:5%;
+
+
+		}
+        .white:hover .piece-bw{
+            top: 85px;
+        }
+        .black:hover .piece-bb{
+            top:85px;
+        }
+        .white:hover .piece-ww{
+            margin-top: -75px;
+            transition: all 1s linear;
+        }
+
+        .black:hover .piece-wb{
+             margin-top: -75px;
+            transition: all 1s linear;
+        }
+        
+        .black:hover .rook-br , .white:hover .rook-bl , .black:hover .queen-b{
+            position: absolute;
+            top: 430px;
+            left:13px;
+            transition:1.8s;
+            
+        }
+        .black:hover .rook-w , .white:hover .rook-w , .white:hover .queen-w{
+            position: absolute;
+            top: -415px;
+            left:13px;
+            transition:1.8s;
+        }
+        .white:hover .knight-br{
+            position: absolute;
+            top:175px;
+            left: 99px;
+            transition:1.8s;
+        }
+        .black:hover .knight-bl{
+            position: absolute;
+            top:175px;
+            left: 100px;
+            transition:1.8s;
+        }
+        .black:hover .bishop-br{
+            position:absolute;
+            top:175px;
+            left:-155px;
+            transition:1.8s; 
+        }
+        .white:hover .bishop-bl{
+            position:absolute;
+            top:170px;
+            left:187px;
+            transition:1.8s; 
+        }
+        .white:hover .knight-wl{
+            position: absolute;
+            top:-160px;
+            left: -65px;
+            transition:1.8s;
+        }
+        .black:hover .knight-wr{
+            position: absolute;
+            top:-160px;
+            left: 98px;
+            transition:1.8s;
+        }
+        .white:hover .bishop-wr{
+            position:absolute;
+            top:-175px;
+            left:-155px;
+            transition:1.8s; 
+        }
+        .black:hover .bishop-wl{
+            position:absolute;
+            top:-165px;
+            left:187px;
+            transition:1.8s; 
+        }
+
+
+
+	</style>
+</head>
+<body>
+	<div class="chessboard">
+	
+		    <div class="black"><div class="piece rook-br">&#9814;</div> </div>
+            <div class="white"><div class="piece knight-br">&#9816;</div> </div>
+            <div class="black"><div class="piece bishop-br">&#9815;</div> </div>
+            <div class="white"><div class="piece king-b">&#9813;</div> </div>
+            <div class="black"><div class="piece queen-b">&#9812;</div> </div>
+            <div class="white"><div class="piece bishop-bl">&#9815;</div> </div>
+            <div class="black"><div class="piece knight-bl">&#9816;</div> </div>
+            <div class="white"><div class="piece rook-bl">&#9814;</div> </div>
+               
+            <div class="white"><div class="piece  piece-bw">&#9817;</div></div>
+            <div class="black"><div class="piece  piece-bb">&#9817;</div></div>
+            <div class="white"><div class="piece  piece-bw">&#9817;</div></div>
+            <div class="black"><div class="piece  piece-bb">&#9817;</div></div>
+            <div class="white"><div class="piece  piece-bw">&#9817;</div></div>
+            <div class="black"><div class="piece  piece-bb">&#9817;</div></div>
+            <div class="white"><div class="piece  piece-bw">&#9817;</div></div>
+            <div class="black"><div class="piece  piece-bb">&#9817;</div></div>
+
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+            <div class="white"></div>
+            <div class="black"></div>
+
+            <div class="black"><div class="piece-wb">&#9823;</div></div>
+            <div class="white"><div class="piece-ww">&#9823;</div></div>
+            <div class="black"><div class="piece-wb">&#9823;</div></div>
+            <div class="white"><div class="piece-ww">&#9823;</div></div>
+            <div class="black"><div class="piece-wb">&#9823;</div></div>
+            <div class="white"><div class="piece-ww">&#9823;</div></div>
+            <div class="black"><div class="piece-wb">&#9823;</div></div>
+            <div class="white"><div class="piece-ww">&#9823;</div></div>
+
+            <div class="white "><div class="piece rook-w">&#9820;</div></div>
+            <div class="black"><div class="piece knight-wr">&#9822;</div></div>
+            <div class="white"><div class="piece bishop-wr">&#9821;</div> </div>
+            <div class="black"><div class="piece king-w">&#9819;</div></div>
+            <div class="white"><div class="piece queen-w">&#9818;</div></div>
+            <div class="black"><div class="piece bishop-wl">&#9821;</div></div>
+            <div class="white"><div class="piece knight-wl">&#9822;</div></div>
+            <div class="black"><div class="piece rook-w">&#9820;</div></div>
+
+         
+         </div>
+
+</body>
+</html>
